@@ -1,0 +1,52 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main()
+{
+    int x;
+    int n;
+    srand(time(0));
+    x=(rand()%100)+1;
+    printf("%d",x);
+    int y=0;
+
+
+
+
+while(y<5)
+
+
+
+
+    {
+      printf("enter the random number");
+      scanf("%d",&n);
+
+      if(x>n)
+      {
+
+        printf("go for greater number\n");
+      }
+      else
+        if(x<n)
+      {
+
+        printf("go for smaller number\n");
+
+      }
+      else
+      if(x==n)
+        {
+        printf("the number is correct and %d",x);
+      break;
+      }
+
+y++;
+printf("you lost");
+
+
+    }
+    return 0;
+
+}
