@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int n;
+    int r;
+    int d=0;
+    int sum=0;
+
+
+    scanf("%d",&n);
+    int x=n;
+    int y=n;
+    while(n>0)
+    {
+        d++;
+        n=n/10;
+    }
+    while(x>0)
+    {
+        r=x%10;
+        sum=sum+pow(r,d);
+        x=x/10;
+    }
+
+        if(y==sum)
+      {
+
+          printf("its arms");
+      }
+        return 0;
+}
