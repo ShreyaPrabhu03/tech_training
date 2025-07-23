@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include<string.h>
+
+
+int main()
+{
+    int n;
+    int s[n];
+    scanf("%d",&n);
+
+    int l=0;
+    int i;
+
+    int flag=0;
+    for(i=0;s[i]!='\0';i++)
+    {
+        if(s[i]!=s[l-i-1])
+        {
+            flag=1;
+
+            break;
+        }
+        l++;
+    }
+    if(flag==0)
+        printf("palindrome");
+    else
+        printf("it is not a palindrome");
+    return 0;
+}
