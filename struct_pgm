@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <stdlib.h>
+struct employ
+{
+   char name[100];
+   int id;
+   int salary;
+   int exp;
+   char dept[100];
+
+
+
+}e;
+
+
+int main()
+{
+    scanf("%[^\n]s",&e.name);
+    scanf("%d",&e.id);
+    scanf("%d",&e.salary);
+    scanf("%d",&e.exp);
+     scanf("%[^\n]s",&e.dept);
+      printf("%s",e.name);
+    printf("%d",e.id);
+    printf("%d",e.salary);
+    printf("%d",e.exp);
+     printf("%s",e.dept);
+     return 0;
+
+
+}
