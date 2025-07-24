@@ -1,0 +1,19 @@
+#include <iostream>
+
+using namespace std;
+
+int area(int a)
+{
+    int ar;
+    ar= a*a;
+   return ar;
+}
+
+int main()
+{
+    int x,res;
+    cin>>x;
+    res=area(x);
+    cout<<res;
+    return 0;
+}
