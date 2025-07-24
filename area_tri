@@ -1,0 +1,19 @@
+#include <iostream>
+
+using namespace std;
+
+int area(int a,int b,int h)
+{
+    return 0.5*b*h;
+
+}
+
+int main()
+{
+    int x,y,z;
+    int res;
+    cin>>x>>y>>z;
+    res=area(x,y,z);
+    cout<<res;
+    return 0;
+}
