@@ -1,0 +1,11 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+  float a=17,b=5;
+  float c=a/b;
+   cout<<"the addition result="<<c;
+    return 0;
+}
