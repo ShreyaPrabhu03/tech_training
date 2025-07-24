@@ -1,0 +1,20 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int a,b,c;
+    cin>>a>>b;
+    c=a+b;
+    cout<<"the addtion fesult is ="<<c<<endl;
+
+    int s,m,d;
+    s=a-b;
+    m=a*b;
+    d=a/b;
+    cout<<"the sub result "<<s<<endl;
+     cout<<"the mul result "<<m<<endl;
+      cout<<"the div  result "<<d<<endl;
+      return 0;
+}
