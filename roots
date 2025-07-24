@@ -1,0 +1,28 @@
+#include <iostream>
+#include<math.h>
+
+using namespace std;
+
+int main()
+{
+int a,b,c;
+float res1,res2;
+   cin>>a>>b>>c;
+   int d=(b*b)-4*a*c;
+   if(d<0)
+   {
+
+      cout<<"roots not exist"<<endl;
+   }
+
+   else
+   {
+
+    res1=(-b+sqrt(d))/2*a;
+
+     res2=(-b-sqrt(d))/2*a;
+   cout<<"the roots are"<<res1<<"the second root "<<res2;
+   }
+
+    return 0;
+}
