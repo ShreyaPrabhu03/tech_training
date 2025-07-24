@@ -1,0 +1,11 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+   int a=100,b=50;
+   int c=a-b;
+   cout<<"the subtraction result="<<c;
+    return 0;
+}
