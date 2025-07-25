@@ -1,0 +1,42 @@
+#include <iostream>
+#include <cstdlib>
+using namespace std;
+
+int unique(int *x, int n)
+{
+    int m=0;
+    for (int i=0; i<n;i++)
+    {
+        int found = 0;
+        for (int j = 0;j <m;j++)
+        {
+            if (x[i]==x[j])
+            {
+                found=1;
+                break;
+            }
+        }
+        if (!found)
+            x[m++] = x[i];
+    }
+    return m;
+}
+
+int main()
+{
+    int n;
+    cin >> n;
+
+    int *a = (int*)malloc(n * sizeof(int));
+    for (int i = 0; i < n; i++)
+        cin >> a[i];
+
+    int res = unique(a, n);
+
+    cout << res << '\n';
+    for (int i = 0; i < res; i++)
+        cout << a[i];
+
+    free(a);
+    return 0;
+}
