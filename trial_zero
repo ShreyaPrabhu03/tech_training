@@ -1,0 +1,44 @@
+#include <iostream>
+
+using namespace std;
+
+int factorial(int n)
+{
+    int f=1;
+    int i;
+    for(i=2;i<=n;i++)
+    {
+        f=f*i;
+    }
+    return f;
+
+}
+
+int counttrial(int x)
+{
+
+    int count=0;
+    factorial(x);
+    while(x%10==0)
+    {
+        count++;
+        x=x/10;
+
+    }
+
+    return count;
+
+}
+
+
+
+int main()
+{
+   int num;
+   cin>>num;
+
+   int res=counttrial(num);
+   cout<<res;
+
+    return 0;
+}
