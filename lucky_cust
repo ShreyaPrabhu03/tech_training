@@ -1,0 +1,36 @@
+#include <iostream>
+
+using namespace std;
+
+int fib(int n)
+{
+    int count=2;
+    int c;
+    int a=1;
+    int b=1;
+
+    if(n==1||n==2)
+    {
+
+        return a;
+    }
+    while(1)
+    {
+        count++;
+        c=a+b;
+        a=b;
+        b=c;
+        if(count==n)
+            return c;
+    }
+}
+
+int main()
+{
+    int num;
+    cin>>num;
+    int val;
+    val=fib(num);
+    cout<<val;
+    return 0;
+}
