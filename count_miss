@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <ctype.h>
+
+int countmiss(char *s)
+{
+    int miss=0;
+    int i;
+
+    for(i=0;s[i]!='\0';i++)
+
+    if(!(isspace(s[i])||isalpha(s[i])||isdigit(s[i])||isspace(s[i])))
+    {
+        miss++;
+    }
+    return miss;
+}
+
+int main()
+
+{
+
+    char st[100];
+
+    scanf("%[^\n]s",&st);
+    int res;
+    res=countmiss(st);
+    printf("%d",res);
+    return 0;
+
+
+}
