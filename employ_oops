@@ -1,0 +1,56 @@
+#include <iostream>
+
+using namespace std;
+class Employee
+{
+    public:
+    int ID;
+    char name[100];
+    int salary,experience;
+    char dep[200];
+    char desgn[100];
+    public:
+
+    void input()
+    {
+        cout<<"enter the name"<<endl;
+        gets(name);
+        cout<<"enter the Id"<<endl;
+        cin>>ID;
+          cout<<"enter the salary"<<endl;
+        cin>>salary;
+          cout<<"enter the experience"<<endl;
+        cin>>experience;
+         cout<<"enter the depart"<<endl;
+        cin>>dep;
+         cout<<"enter the designation";
+        cin>>desgn;
+
+
+    }
+
+    void display()
+    {
+       cout<<name<<endl;
+       cout<<ID<<endl;
+       cout<<salary<<endl;
+       cout<<experience<<endl;
+       cout<<dep<<endl;
+       cout<<desgn<<endl;
+    }
+
+
+
+};
+
+int main()
+{
+    int i;
+    int flag=1;
+    Employee e;
+    e.input();
+
+    e.display();
+
+    return 0;
+}
