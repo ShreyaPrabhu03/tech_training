@@ -1,0 +1,127 @@
+#include <iostream>
+using namespace std;
+
+class Student {
+public:
+    int hall;
+    char name[100];
+    int m1, m2, m3;
+
+    void input() {
+        cout << "Enter the name";
+        cin >> name;
+        cout << "Enter the hall ticket number";
+        cin >> hall;
+        cout << "Enter marks for m1,m2 and m3";
+        cin >> m1>>m2>>m3;
+    }
+
+    int total()
+    {
+        return m1+m2+m3;
+    }
+
+    float avg() {
+        return total() / 3.0;
+    }
+
+    void grade() {
+        float a = avg();
+        if (a > 90)
+            cout << "Grade A"<<endl;
+        else if (a > 80)
+            cout << "Grade B"<<endl;
+        else if (a > 70)
+            cout << "Grade C"<<endl;
+        else if (a > 60)
+            cout << "Grade D"<<endl;
+        else if (a > 50)
+            cout << "Grade E"<<endl;
+        else if (a > 40)
+            cout << "Grade F"<<endl;
+        else if (a > 35)
+            cout << "Grade is just  Pass"<<endl;
+        else
+            cout << "Grade FAIL\n";
+    }
+
+    bool result() {
+
+       if(m1>35&&m2>35&&m3>35)
+        {
+            return 1;
+        }
+       else
+        {
+        return 0;
+       }
+    }
+
+    void display()
+
+     {
+
+
+        cout << "Student Details"<<endl;
+        cout << "Name is" << name << endl;
+        cout << "Hall Ticket Number is" << hall << endl;
+        cout << "Marks is" << m1 << m2 << m3 << endl;
+        cout << "Average" << avg() << endl;
+
+        grade();
+
+
+
+    }
+};
+
+int main() {
+    int n;
+    cout << "Enter the number of students";
+    cin >> n;
+
+    Student s[100];
+
+    for (int i = 0; i < n; i++) {
+        cout << "Enter details for Student " << i+1 << endl;
+        s[i].input();
+    }
+
+
+
+    for (int i = 0; i < n; i++)
+    {
+        s[i].display();
+    }
+
+
+    int x;
+    cout<<"enter the id"<<endl;
+    cin>>x;
+    int m1,m2,m3;
+
+        int r;
+
+
+        for(int i=0;i<n;i++)
+        {
+
+    if(x==s[i].hall)
+    {
+       if(s[i].result())
+        {
+          s[i].display();
+        }
+        else
+        {
+            cout<<"fail";
+        }
+    }
+    else{
+        cout<<"entered hall ticket id wrong"<<endl;
+    }
+        }
+
+    return 0;
+}
+
